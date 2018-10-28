@@ -1,0 +1,17 @@
+.buttons{
+    float: right;
+    margin: 0 50px;
+}
+button{
+    margin: 0 15px;
+}
+div.center{ 
+    width: 80%;
+    margin: auto;
+}
+.edit-form{
+    display: none;
+    width: 80%;
+    margin: 20px auto;
+    padding: 15px;
+}

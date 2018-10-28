@@ -1,0 +1,45 @@
+<form>
+  <div class="form-group row">
+    <label for="productName" class="col-sm-2 col-form-label">Name</label>
+    <div class="col-sm-8">
+      <input class="form-control" placeholder="name" type="text" name="name" #name>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="productImage" class="col-sm-2 col-form-label">Image</label>
+    <div class="col-sm-8">
+      <input class="form-control-file" placeholder="image" type="file" name="image" (change)="onFileSelected($event)">
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="productSKU" class="col-sm-2 col-form-label">SKU</label>
+    <div class="col-sm-8">
+      <input class="form-control" placeholder="sku" type="text" min="6" max="8" name="sku" #sku>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="productCategory" class="col-sm-2 col-form-label">Category</label>
+    <div class="col-sm-8">
+      <input class="form-control" placeholder="category" type="text" name="category" #category>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="productPrice" class="col-sm-2 col-form-label">Price</label>
+    <div class="col-sm-8">
+      <input class="form-control" placeholder="price" type="number" name="price" #price>
+    </div>
+  </div>
+  <div class="form-group row">
+    <label for="productDate" class="col-sm-2 col-form-label">Date</label>
+    <div class="col-sm-8">
+      <input class="form-control" placeholder="date" type="date" name="date" #date>
+    </div>
+  </div>
+  <div class="form-group row">
+    <div class="col-sm-12">
+      <button type="submit" class="btn btn-primary" 
+      (click)="addProduct(name.value, sku.value, category.value, price.value, date.value)">
+        Add Product</button>
+    </div>
+  </div>
+</form>
